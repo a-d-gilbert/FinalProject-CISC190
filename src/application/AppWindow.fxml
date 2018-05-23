@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <bottom>
+	   <HBox spacing="25" alignment="CENTER">
+	     <Button fx:id="start_btn" mnemonicParsing="false" onAction="#startCamera" text="Start Camera" BorderPane.alignment="CENTER">
+	        <BorderPane.margin>
+	           <Insets bottom="10.0" />
+	        </BorderPane.margin>
+	     </Button>
+	     <fx:define>
+	     	<ToggleGroup fx:id="colorGroup"/>
+	     </fx:define>
+	     <RadioButton fx:id="orangeRB" toggleGroup="$colorGroup" text="orange" userData="orange"></RadioButton>
+	     <RadioButton fx:id="greenRB" toggleGroup="$colorGroup" text="green" userData="green"></RadioButton>
+	   	 <RadioButton fx:id="faceRB" toggleGroup="$colorGroup" text="face" userData="face"></RadioButton>
+	   	 <BorderPane.margin>
+            <Insets bottom="10" />
+         </BorderPane.margin>
+	   </HBox>
+   </bottom>
+   <center>
+      <ImageView fx:id="currentFrame" fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </ImageView>
+   </center>
+</BorderPane>
